@@ -1,0 +1,6 @@
+@UserService.Host_HostAddress = http://localhost:5101
+
+GET {{UserService.Host_HostAddress}}/weatherforecast/
+Accept: application/points
+
+###

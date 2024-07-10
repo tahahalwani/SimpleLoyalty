@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  userservice.host:
+    image: ${DOCKER_REGISTRY-}userservicehost
+    build:
+      context: .
+      dockerfile: src/UserService/UserService.Host/Dockerfile
+  redis:
+    image: redis:latest
+  identityserver:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: src/Identity/IdentityServer/Dockerfile
+
